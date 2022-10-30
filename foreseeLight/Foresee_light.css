@@ -2,7 +2,6 @@
 Theme: Foresee(Light Mode)
 Author : passwordgloo
 Github : https://github.com/passwordgloo/Style
-Tip: We use bootstrap 5 style
 */
 
 /*---------Global style ----------*/
@@ -265,46 +264,27 @@ li::marker {
     color: var(--theme-color);
 }
 
-/*---Bootstrap 5 Badge----*/
-/* <span class="badge bg-danger rounded-pill">Your content</span> */
-.badge {
-    display: inline-block;
-    padding: 0.15em 0.65em;
-    margin-left: .5em;
-    font-size: 0.75em;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25rem;
+/* ------------ Badge ------------ */
+span[alt="blue"]{
+    margin-left:.2em;
+    padding:0 .5em;
+    color:var(--light);
+    border-radius: 5%;
+    background-image: linear-gradient(to right, #00E3AE 0%, #00c9ff 100%);
 }
 
-.rounded-pill {
-    border-radius: 50rem !important;
+span[alt="orange"]{
+    margin-left:.2em;
+    padding:0 .5em;
+    color:var(--light);
+    border-radius: 5%;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
 }
 
-.bg-success {
-    background-color: var(--green) !important;
-}
-
-.bg-info {
-    background-color: var(--blue) !important;
-}
-
-.bg-warning {
-    background-color: var(--yellow) !important;
-}
-
-.bg-danger {
-    background-color: var(--theme-color) !important;
-}
-
-.text-dark {
-    color: var(--dark) !important;
-}
-
-.text-white {
-    color: var(--white) !important;
+span[alt="purple"]{
+    margin-left:.2em;
+    padding:0 .5em;
+    color:var(--light);
+    border-radius: 5%;
+    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
 }
