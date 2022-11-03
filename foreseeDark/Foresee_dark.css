@@ -288,3 +288,14 @@ span[alt="purple"]{
     background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
 }
 
+em{
+    font-style:normal;
+    border-bottom: 4px dotted #00CD66;
+}
+
+del{
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: #00CD66;
+}
+
