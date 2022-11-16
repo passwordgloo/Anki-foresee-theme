@@ -1,0 +1,340 @@
+/* 
+Theme: Foresee(Dark Mode)
+Author : passwordgloo
+License: MIT
+Github : https://github.com/passwordgloo/Anki-foresee-theme
+*/
+
+blockquote,body,div,h1,h2,html,img,li,ol,p,ul {
+	margin: 0;
+	padding: 0
+}
+
+:root {
+	--sidebar: #3E3E3E;
+	--focus-color: #FF00FF;
+	--theme-color: #00CD66;
+	--white: #FFFFFF;
+	--dark: #323232;
+	--light: #A8A8A8;
+	--light-dark: #3E3E3E;
+	--gray: #CCCCCC;
+	--light-gray: #B3B3B3;
+	--text-size: 1.4rem;
+	--font-family: "Arial","Microsoft YaHei","sans-serif","PingFang SC","Segoe UI Emoji","Segoe UI Symbol","Segoe UI"
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--theme-color)
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: var(--focus-color)
+}
+
+html {
+	cursor: url(paperplane.ico),auto;
+	scrollbar-color: var(--theme-color) rgba(0,0,0,.2);
+	scrollbar-width: thin
+}
+
+main {
+	margin: 15% 5%;
+	padding-bottom: 1em;
+	font-family: var(--font-family);
+	border-radius: 12px;
+	background-color: var(--dark);
+	box-sizing: border-box;
+	box-shadow: 0 12px 5px -10px rgba(0,0,0,.1),0 0 4px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 12px 5px -10px rgba(0,0,0,.1),0 0 4px 0 rgba(0,0,0,.1)
+}
+
+nav::before {
+	content: '● ● ●';
+	float: right;
+	font-size: 3em;
+	background-image: -webkit-linear-gradient(left,tomato 33%,#3c6 33%,#3c6 67%,#ffc107 67%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent
+}
+
+nav {
+	padding: 4px 20px;
+	height: 1.6em;
+	line-height: 1.6em;
+	border-radius: 12px 12px 0 0;
+	background: var(--light-dark)
+}
+
+h1 {
+	color: var(--light);
+	font-size: 2rem;
+	font-weight: 2000;
+	font-family: var(--font-family)
+}
+
+h2 {
+	font-weight: 1000;
+	font-size: 1.8rem;
+	margin: .5em 0 0 .5em;
+	color: var(--gray)
+}
+
+h2::before {
+	content: "";
+	animation: all .3s ease;
+	margin: 0 .5em;
+	border-left: 10px solid var(--theme-color)
+}
+
+h3 {
+	margin: .5em 1em 0;
+	line-height: 1.5;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--theme-color);
+	font-family: var(--font-family);
+	border-bottom: 1px dashed var(--theme-color)
+}
+
+h4 {
+	margin: .5em 1em 0;
+	font-weight: 300;
+	font-size: 1.4rem;
+	color: var(--theme-color);
+	font-family: var(--font-family)
+}
+
+article {
+	padding: 0 2rem;
+	font-size: var(--text-size);
+	color: var(--light)
+}
+
+.cloze {
+	font-weight: 700;
+	color: var(--theme-color)
+}
+
+p {
+	text-indent: 1em;
+	font-size: var(--text-size);
+	color: var(--light)
+}
+
+a {
+	color: #0dcaf0
+}
+
+a:hover {
+	color: var(--focus-color)
+}
+
+::selection {
+	background: var(--theme-color);
+	color: var(--white)
+}
+
+u {
+	position: relative
+}
+
+u:hover::before {
+	content: attr(data-title);
+	display: inline-block;
+	padding: .01em .2em;
+	text-indent: 0;
+	white-space: nowrap;
+	border-radius: .3em;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	top: -1.9em;
+	background-color: var(--theme-color);
+	color: var(--white)
+}
+
+u:hover::after {
+	position: absolute;
+	left: 1em;
+	top: -.55em;
+	width: 0;
+	height: 0;
+	content: " ";
+	border-right: 7px solid transparent;
+	border-top: 7px solid var(--theme-color);
+	border-left: 7px solid transparent;
+	border-bottom: 7px solid transparent
+}
+
+b,code,strong {
+	padding: .3rem;
+	margin-right: .4em;
+	color: var(--theme-color);
+	border-radius: 2px;
+	background-color: var(--light-dark)
+}
+
+sup {
+	margin: 0 .3em;
+	padding: .05em .1em;
+	font-size: medium;
+	color: var(--theme-color);
+	border-radius: 4px;
+	background-color: var(--light-dark)
+}
+
+blockquote {
+	border: none;
+	padding: .5em;
+	background-color: var(--sidebar);
+	line-height: inherit;
+	margin: 1em 2em;
+	border-left: 4px solid var(--theme-color);
+	color: var(--theme-color);
+	overflow: hidden
+}
+
+blockquote img {
+	position: relative;
+	transform: translateX(-80px);
+	filter: drop-shadow(var(--theme-color) 80px 0);
+	height: 1rem;
+	margin-right: .2rem
+}
+
+h2+blockquote {
+	color: #00cd66;
+	border-left-color: #00cd66
+}
+
+h2+blockquote img {
+	position: relative;
+	transform: translateX(-80px);
+	filter: drop-shadow(#00cd66 80px 0);
+	height: 1rem;
+	margin-right: .2rem
+}
+
+h3+blockquote {
+	color: #00bfff;
+	border-left-color: #00bfff
+}
+
+h3+blockquote img {
+	position: relative;
+	transform: translateX(-80px);
+	filter: drop-shadow(#00bfff 80px 0);
+	height: 1rem;
+	margin-right: .2rem
+}
+
+h4+blockquote {
+	border-left-color: #ff8c00;
+	color: #ff8c00
+}
+
+h4+blockquote img {
+	position: relative;
+	transform: translateX(-80px);
+	filter: drop-shadow(#ff8c00 80px 0);
+	height: 1rem;
+	margin-right: .2rem
+}
+
+pre {
+	margin: 1em 2rem;
+	font-size: var(--text-size)
+}
+
+code {
+	padding: .3rem;
+	margin-right: .4em;
+	color: var(--theme-color);
+	border-radius: 4px;
+	background-color: var(--sidebar)
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	color: var(--light-dark)
+}
+
+caption {
+	color: var(--light);
+	font-family: var(--font-family);
+	font-size: var(--text-size);
+	margin: 20px 0 10px 0
+}
+
+table td {
+	font-weight: 400;
+	text-align: left
+}
+
+td,th {
+	padding: .6em;
+	font-size: var(--text-size)
+}
+
+th {
+	text-align: center;
+	color: var(--light);
+	background: var(--light-dark)
+}
+
+tr:nth-child(even) {
+	background: #919197
+}
+
+tr:nth-child(odd) {
+	background: #77777c
+}
+
+ol>li,ul>li {
+	margin-left: 2em;
+	font-size: var(--text-size);
+	color: var(--light-gray)
+}
+
+li::marker {
+	margin-left: 1em;
+	color: var(--theme-color)
+}
+
+span[alt=blue] {
+	margin-left: .2em;
+	padding: 0 .5em;
+	color: #fff7c8;
+	border-radius: 5%;
+	background-image: linear-gradient(to right,#00c6fb 0,#005bea 100%)
+}
+
+span[alt=orange] {
+	margin-left: .2em;
+	padding: 0 .5em;
+	color: #fff;
+	border-radius: 5%;
+	background-image: linear-gradient(-60deg,#ff5858 0,#f09819 100%)
+}
+
+span[alt=purple] {
+	margin-left: .2em;
+	padding: 0 .5em;
+	color: #fff;
+	border-radius: 5%;
+	background-image: linear-gradient(to right,#ec77ab 0,#7873f5 100%)
+}
+
+em {
+	font-style: normal;
+	border-bottom: 4px dotted var(--focus-color)
+}
+
+del {
+	text-decoration-style: wavy;
+	text-decoration-line: underline;
+	text-decoration-color: var(--focus-color)
+}
